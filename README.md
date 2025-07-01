@@ -190,14 +190,14 @@ $ git remote add origin git@github.com:%ИМЯ_АККАУНТА%/first-project.g
 ### Жизненный цикл файла в Git
 
 1. Файл только что создали. Git ещё не отслеживает содержимое этого файла. Состояние: _untracked_
-2. Файл добавили в staging area с помощью git add. Состояние: _staged_ (+ _tracked_ ).
- 	* Возможно, изменили файл ещё раз. Состояния: _staged, modified_ (+ _tracked_ ).
- 	* Обратите внимание: staged и modified у одного файла, но у разных его версий.
- 	* Ещё раз выполнили git add. Состояние: staged (+ tracked).
-3. Сделали коммит с помощью git commit. Состояние: tracked.
-4. Изменили файл. Состояние: modified (+ tracked).
-5. Снова добавили в staging area с помощью git add. Состояния: staged (+ tracked).
-6. Сделали коммит. Состояния: tracked.
+2. untracked + git add = _staged_ (+ _tracked_ ).
+ 	* изменение файла =  _staged, modified_ (+ _tracked_ ).
+ 	* staged и modified у одного файла, но у разных его версий.
+ 	* еще раз git add = staged (+ tracked).
+3. git commit = tracked.
+4. изменение файла = modified (+ tracked).
+5. + git add = staged (+ tracked).
+6. + git commit = tracked.
 
 ### Git status
 
